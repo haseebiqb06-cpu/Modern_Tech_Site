@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Babbage Tech Global — IT, Branding & Digital Marketing Agency</title>
+  <meta name="description" content="Babbage Tech Global — Your full-stack digital partner for IT solutions, Branding, SEO, Digital Marketing, Content Production, Web Design, and Shopify Development." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+  <link rel="stylesheet" href="css/home.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+
+<!-- Page Loader -->
+<div id="page-loader">
+  <div class="loader-content">
+    <div class="loader-logo">BABBAGE TECH<span> GLOBAL</span></div>
+    <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+  </div>
+</div>
+
+<!-- Custom Cursor -->
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+
+<!-- Navbar -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">BABBAGE TECH<span> GLOBAL</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li class="nav-item dropdown-container">
+        <a href="services.html">Services</a>
+        <div class="dropdown-wrapper">
+          <i class="ph-bold ph-caret-down"></i>
+          <div class="dropdown-menu">
+            <a href="services.html#it">IT Solutions</a>
+            <a href="services.html#branding">Branding</a>
+            <a href="services.html#marketing">Digital Marketing</a>
+            <a href="services.html#content">Content & Video</a>
+            <a href="services.html#web">Web Design</a>
+            <a href="services.html#shopify">Shopify Development</a>
+          </div>
+        </div>
+      </li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="contact.html" class="nav-cta">Get a Quote</a></li>
+    </ul>
+    <div class="nav-hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a>
+  <a href="about.html">About Us</a>
+  <a href="services.html">Services</a>
+  <a href="contact.html">Contact</a>
+  <a href="contact.html" style="color:var(--accent)">Get a Quote <i class="ph ph-arrow-right"></i></a>
+</div>
+
+<!-- ══════════════════════════════════════ -->
+<!-- HERO SECTION -->
+<!-- ══════════════════════════════════════ -->
+<section class="hero" id="hero">
+  <canvas id="particles-canvas"></canvas>
+  <div class="grid-bg"></div>
+  <div class="orb orb-purple" style="top:-200px;left:-150px;"></div>
+  <div class="orb orb-teal" style="bottom:-100px;right:-100px;"></div>
+
+  <div class="container">
+    <div class="hero-inner">
+      <!-- Left Content -->
+      <div class="hero-content">
+        <div class="hero-eyebrow">
+          <span class="hero-eyebrow-dot"></span>
+          Global Digital Agency
+        </div>
+        <h1 class="hero-title">
+          We Build<br/>
+          <span class="gradient-text">Digital</span><br/>
+          <span id="typed-text"></span><span class="typed-cursor">|</span>
+        </h1>
+        <p class="hero-subtitle">
+          From cutting-edge IT solutions to bold branding and data-driven marketing — Babbage Tech Global is your end-to-end partner for the digital era.
+        </p>
+        <div class="hero-buttons">
+          <a href="services.html" class="btn btn-primary">
+            Explore Services
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="contact.html" class="btn btn-outline">Start a Project</a>
+        </div>
+        <div class="hero-trust">
+          <div class="hero-avatars">
+            <div class="hero-avatar">AK</div>
+            <div class="hero-avatar">SR</div>
+            <div class="hero-avatar">MJ</div>
+            <div class="hero-avatar">+</div>
+          </div>
+          <span class="hero-trust-label">Trusted by 200+ global clients</span>
+        </div>
+      </div>
+
+      <!-- Right Visual — Globe -->
+      <div class="hero-visual">
+        <div id="globe-container">
+          <canvas id="globe-canvas"></canvas>
+          <div class="globe-ring globe-ring-1"></div>
+          <div class="globe-ring globe-ring-2"></div>
+          <div class="globe-ring globe-ring-3"></div>
+
+          <div class="globe-badge globe-badge-1">
+            <span class="globe-badge-icon"><i class="ph-light ph-rocket-launch"></i></span>
+            <div class="globe-badge-info">
+              <strong>200+ Projects</strong>
+              <span>Delivered Globally</span>
+            </div>
+          </div>
+          <div class="globe-badge globe-badge-2">
+            <span class="globe-badge-icon"><i class="ph-light ph-trend-up"></i></span>
+            <div class="globe-badge-info">
+              <strong>340% Avg. ROI</strong>
+              <span>For Our Clients</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════ -->
+<!-- MARQUEE -->
+<!-- ══════════════════════════════════════ -->
+<div class="marquee-section">
+  <div class="marquee-wrap">
+    <div class="marquee-track" id="marqueeTrack">
+      <span class="marquee-item">IT Solutions</span>
+      <span class="marquee-item">Brand Identity</span>
+      <span class="marquee-item">SEO & SMM</span>
+      <span class="marquee-item">Web Design</span>
+      <span class="marquee-item">Shopify Development</span>
+      <span class="marquee-item">Video Production</span>
+      <span class="marquee-item">Digital Marketing</span>
+      <span class="marquee-item">Content Strategy</span>
+      <span class="marquee-item">IT Solutions</span>
+      <span class="marquee-item">Brand Identity</span>
+      <span class="marquee-item">SEO & SMM</span>
+      <span class="marquee-item">Web Design</span>
+      <span class="marquee-item">Shopify Development</span>
+      <span class="marquee-item">Video Production</span>
+      <span class="marquee-item">Digital Marketing</span>
+      <span class="marquee-item">Content Strategy</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════ -->
+<!-- STATS -->
+<!-- ══════════════════════════════════════ -->
+<section class="stats-section" id="stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="stat-number" data-target="200">0</div>
+        <div class="stat-label">Projects Delivered</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-target="150">0</div>
+        <div class="stat-label">Happy Clients</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-target="6">0</div>
+        <div class="stat-label">Core Services</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-target="5">0</div>
+        <div class="stat-label">Years of Excellence</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════ -->
+<!-- SERVICES PREVIEW -->
+<!-- ══════════════════════════════════════ -->
+<section class="services-section" id="services">
+  <div class="orb orb-purple" style="top:50%;left:-200px;transform:translateY(-50%);"></div>
+  <div class="container" style="position:relative;z-index:1">
+    <div class="section-center">
+      <div class="section-tag">What We Do</div>
+      <h2 class="section-title">Our <span class="accent">Core Services</span></h2>
+      <p class="section-subtitle">
+        End-to-end digital solutions designed to elevate your brand and accelerate growth in the modern marketplace.
+      </p>
+    </div>
+
+    <div class="services-grid">
+      <!-- IT Solutions -->
+      <div class="glass-card service-card reveal">
+        <div class="service-icon"><i class="ph-light ph-monitor"></i></div>
+        <h3 class="service-card-title">IT Solutions</h3>
+        <p class="service-card-desc">Custom software, cloud infrastructure, cybersecurity, and IT consulting tailored to scale your business operations efficiently.</p>
+        <div style="margin-top:20px;display:flex;flex-wrap:wrap;gap:4px;">
+          <span class="tech-tag">Cloud</span>
+          <span class="tech-tag">Cybersecurity</span>
+          <span class="tech-tag">Consulting</span>
+        </div>
+        <a href="services.html#it" style="display:inline-flex;align-items:center;gap:6px;color:var(--accent);text-decoration:none;font-size:0.85rem;font-weight:600;margin-top:20px;">Learn More <i class="ph ph-arrow-right"></i></a>
+      </div>
+
+      <!-- Branding -->
+      <div class="glass-card service-card reveal" style="transition-delay:0.1s">
+        <div class="service-icon"><i class="ph-light ph-palette"></i></div>
+        <h3 class="service-card-title">Branding</h3>
+        <p class="service-card-desc">Crafting powerful brand identities — from logo design and visual systems to brand voice and full brand strategy.</p>
+        <div style="margin-top:20px;display:flex;flex-wrap:wrap;gap:4px;">
+          <span class="tech-tag">Logo Design</span>
+          <span class="tech-tag">Identity</span>
+          <span class="tech-tag">Strategy</span>
+        </div>
+        <a href="services.html#branding" style="display:inline-flex;align-items:center;gap:6px;color:var(--accent);text-decoration:none;font-size:0.85rem;font-weight:600;margin-top:20px;">Learn More <i class="ph ph-arrow-right"></i></a>
+      </div>
+
+      <!-- Digital Marketing -->
+      <div class="glass-card service-card reveal" style="transition-delay:0.2s">
+        <div class="service-icon"><i class="ph-light ph-chart-bar"></i></div>
+        <h3 class="service-card-title">Digital Marketing</h3>
+        <p class="service-card-desc">Data-driven SEO, Social Media Marketing, and paid campaigns that drive real traffic and measurable ROI for your business.</p>
+        <div style="margin-top:20px;display:flex;flex-wrap:wrap;gap:4px;">
+          <span class="tech-tag">SEO</span>
+          <span class="tech-tag">SMM</span>
+          <span class="tech-tag">PPC</span>
+        </div>
+        <a href="services.html#marketing" style="display:inline-flex;align-items:center;gap:6px;color:var(--accent);text-decoration:none;font-size:0.85rem;font-weight:600;margin-top:20px;">Learn More <i class="ph ph-arrow-right"></i></a>
+      </div>
+
+      <!-- Content &amp; Video -->
+      <div class="glass-card service-card reveal" style="transition-delay:0.3s">
+        <div class="service-icon"><i class="ph-light ph-video-camera"></i></div>
+        <h3 class="service-card-title">Content & Video Production</h3>
+        <p class="service-card-desc">Compelling content strategies and high-production video that tells your brand story and captivates your target audience.</p>
+        <div style="margin-top:20px;display:flex;flex-wrap:wrap;gap:4px;">
+          <span class="tech-tag">Video</span>
+          <span class="tech-tag">Copywriting</span>
+          <span class="tech-tag">Animation</span>
+        </div>
+        <a href="services.html#content" style="display:inline-flex;align-items:center;gap:6px;color:var(--accent);text-decoration:none;font-size:0.85rem;font-weight:600;margin-top:20px;">Learn More <i class="ph ph-arrow-right"></i></a>
+      </div>
+
+      <!-- Web Design -->
+      <div class="glass-card service-card reveal" style="transition-delay:0.4s">
+        <div class="service-icon"><i class="ph-light ph-browser"></i></div>
+        <h3 class="service-card-title">Web Design</h3>
+        <p class="service-card-desc">Stunning, responsive websites built for performance — from pixel-perfect UI/UX design to blazing-fast development and deployment.</p>
+        <div style="margin-top:20px;display:flex;flex-wrap:wrap;gap:4px;">
+          <span class="tech-tag">UI/UX</span>
+          <span class="tech-tag">React</span>
+          <span class="tech-tag">WordPress</span>
+        </div>
+        <a href="services.html#webdesign" style="display:inline-flex;align-items:center;gap:6px;color:var(--accent);text-decoration:none;font-size:0.85rem;font-weight:600;margin-top:20px;">Learn More <i class="ph ph-arrow-right"></i></a>
+      </div>
+
+      <!-- Shopify -->
+      <div class="glass-card service-card reveal" style="transition-delay:0.5s">
+        <div class="service-icon"><i class="ph-light ph-shopping-cart"></i></div>
+        <h3 class="service-card-title">Shopify Development</h3>
+        <p class="service-card-desc">Full-featured Shopify stores with custom themes, app integrations, and conversion-optimized UX that turns visitors into buyers.</p>
+        <div style="margin-top:20px;display:flex;flex-wrap:wrap;gap:4px;">
+          <span class="tech-tag">Shopify</span>
+          <span class="tech-tag">E-Commerce</span>
+          <span class="tech-tag">Liquid</span>
+        </div>
+        <a href="services.html#shopify" style="display:inline-flex;align-items:center;gap:6px;color:var(--accent);text-decoration:none;font-size:0.85rem;font-weight:600;margin-top:20px;">Learn More <i class="ph ph-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:48px;">
+      <a href="services.html" class="btn btn-primary">View All Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════ -->
+<!-- WHY US -->
+<!-- ══════════════════════════════════════ -->
+<section class="why-section" id="why">
+  <div class="container">
+    <div class="grid-2">
+      <div class="reveal-left">
+        <div class="section-tag">Why Choose Us</div>
+        <h2 class="section-title">The <span class="teal">Babbage</span> Difference</h2>
+        <p class="section-subtitle">We don't just deliver projects — we build digital ecosystems that grow with your business and set you apart from the competition.</p>
+        <div style="margin-top:32px; display: flex; flex-wrap: wrap; gap: 16px;">
+          <a href="about.html" class="btn btn-primary">Discover Our Story</a>
+          <a href="about.html#team" class="btn btn-outline">Meet the Visionaries</a>
+        </div>
+      </div>
+      <div class="why-grid reveal-right">
+        <div class="why-item">
+          <div class="why-icon"><i class="ph-light ph-lightning"></i></div>
+          <div>
+            <div class="why-title">Rapid Delivery</div>
+            <div class="why-desc">Agile workflows and dedicated teams ensure your projects launch on time, every time.</div>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="why-icon"><i class="ph-light ph-target"></i></div>
+          <div>
+            <div class="why-title">Data-Driven Strategy</div>
+            <div class="why-desc">Every decision backed by analytics, market research, and proven digital growth frameworks.</div>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="why-icon"><i class="ph-light ph-shield-check"></i></div>
+          <div>
+            <div class="why-title">Enterprise Security</div>
+            <div class="why-desc">Industry-grade security protocols protecting your data and digital assets at every layer.</div>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="why-icon"><i class="ph-light ph-globe-hemisphere-west"></i></div>
+          <div>
+            <div class="why-title">Global Reach</div>
+            <div class="why-desc">Serving clients across continents with localised strategies and international expertise.</div>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="why-icon"><i class="ph-light ph-handshake"></i></div>
+          <div>
+            <div class="why-title">Dedicated Support</div>
+            <div class="why-desc">Your success is our mission — 24/7 dedicated account managers and technical support.</div>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="why-icon"><i class="ph-light ph-trend-up"></i></div>
+          <div>
+            <div class="why-title">Measurable ROI</div>
+            <div class="why-desc">Transparent reporting, real KPIs, and strategies that consistently deliver 300%+ ROI.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════ -->
+<!-- TESTIMONIALS -->
+<!-- ══════════════════════════════════════ -->
+<section class="testimonials-section">
+  <div class="container">
+    <div class="section-center reveal">
+      <div class="section-tag">Client Love</div>
+      <h2 class="section-title">What Our Clients <span class="accent">Say</span></h2>
+    </div>
+  </div>
+  <div style="overflow:hidden;margin-top:60px;">
+    <div class="testimonials-track">
+      <div class="testimonial-card">
+        <div class="testimonial-stars">
+          <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+        </div>
+        <p class="testimonial-text">"Babbage Tech completely transformed our online presence. Our Shopify store revenue tripled within 3 months of their redesign and marketing strategy."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">AK</div>
+          <div>
+            <div class="testimonial-name">Ahmed Khan</div>
+            <div class="testimonial-role">CEO, RetailPlus UAE</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">
+          <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+        </div>
+        <p class="testimonial-text">"The branding package they delivered was beyond expectations. Our brand now commands premium prices in our market. Worth every penny."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">SR</div>
+          <div>
+            <div class="testimonial-name">Sarah Rahman</div>
+            <div class="testimonial-role">Founder, NovaBrand Studio</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">
+          <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+        </div>
+        <p class="testimonial-text">"Their SEO team took us from page 5 to top 3 on Google in just 4 months. Organic traffic increased by 280%. Absolutely incredible results."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">MJ</div>
+          <div>
+            <div class="testimonial-name">Mark Johnson</div>
+            <div class="testimonial-role">CMO, TechFlow Inc.</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">
+          <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+        </div>
+        <p class="testimonial-text">"The video production team is world-class. Our product launch campaign got 2M+ views in the first week. The ROI was phenomenal."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">FZ</div>
+          <div>
+            <div class="testimonial-name">Fatima Zahra</div>
+            <div class="testimonial-role">Head of Marketing, GrowthHub</div>
+          </div>
+        </div>
+      </div>
+      <!-- Duplicates for loop -->
+      <div class="testimonial-card">
+        <div class="testimonial-stars">
+          <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+        </div>
+        <p class="testimonial-text">"Babbage Tech completely transformed our online presence. Our Shopify store revenue tripled within 3 months of their redesign and marketing strategy."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">AK</div>
+          <div>
+            <div class="testimonial-name">Ahmed Khan</div>
+            <div class="testimonial-role">CEO, RetailPlus UAE</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">
+          <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+        </div>
+        <p class="testimonial-text">"The branding package they delivered was beyond expectations. Our brand now commands premium prices in our market. Worth every penny."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">SR</div>
+          <div>
+            <div class="testimonial-name">Sarah Rahman</div>
+            <div class="testimonial-role">Founder, NovaBrand Studio</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">
+          <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+        </div>
+        <p class="testimonial-text">"Their SEO team took us from page 5 to top 3 on Google in just 4 months. Organic traffic increased by 280%. Absolutely incredible results."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">MJ</div>
+          <div>
+            <div class="testimonial-name">Mark Johnson</div>
+            <div class="testimonial-role">CMO, TechFlow Inc.</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">
+          <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+        </div>
+        <p class="testimonial-text">"The video production team is world-class. Our product launch campaign got 2M+ views in the first week. The ROI was phenomenal."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">FZ</div>
+          <div>
+            <div class="testimonial-name">Fatima Zahra</div>
+            <div class="testimonial-role">Head of Marketing, GrowthHub</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════ -->
+<!-- CTA SECTION -->
+<!-- ══════════════════════════════════════ -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-inner reveal">
+      <div class="orb orb-purple"></div>
+      <h2 class="cta-title shimmer-text">Ready to Grow Your Business?</h2>
+      <p class="cta-sub">Let's build something extraordinary together. Get your free strategy consultation today.</p>
+      <div class="cta-buttons">
+        <a href="contact.html" class="btn btn-primary">Get Free Consultation</a>
+        <a href="services.html" class="btn btn-outline">Explore Services</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════ -->
+<!-- FOOTER -->
+<!-- ══════════════════════════════════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="nav-logo" style="font-size:1.6rem;">BABBAGE TECH<span> GLOBAL</span></a>
+        <p class="footer-brand-desc">Your full-stack digital partner — IT, Branding, Marketing, Content, Web Design & Shopify. Powering businesses globally with innovation and strategy.</p>
+        <div class="social-links" style="margin-top:24px;">
+          <a href="#" class="social-link" title="LinkedIn"><i class="ph-light ph-linkedin-logo"></i></a>
+          <a href="#" class="social-link" title="Twitter"><i class="ph-light ph-x-logo"></i></a>
+          <a href="https://www.instagram.com/babbagetechglobal?igsh=YzJ5YXhvazJ6bzZi" target="_blank" class="social-link" title="Instagram"><i class="ph-light ph-instagram-logo"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=61582574995800" target="_blank" class="social-link" title="Facebook"><i class="ph-light ph-facebook-logo"></i></a>
+
+        </div>
+      </div>
+      <div>
+        <div class="footer-heading">Company</div>
+        <ul class="footer-links">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Our Services</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Services</div>
+        <ul class="footer-links">
+          <li><a href="services.html">IT Solutions</a></li>
+          <li><a href="services.html">Branding</a></li>
+          <li><a href="services.html">Digital Marketing</a></li>
+          <li><a href="services.html">Content & Video</a></li>
+          <li><a href="services.html">Web Design</a></li>
+          <li><a href="services.html">Shopify Development</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Contact</div>
+        <ul class="footer-links">
+          <li><a href="mailto:babbagetechglobal@gmail.com">babbagetechglobal@gmail.com</a></li>
+          <li><a href="tel:+923019685025">+92 301 9685025</a></li>
+          <li><a href="#">Global Offices</a></li>
+        </ul>
+        <div style="margin-top:24px;">
+          <div class="badge-teal badge" style="margin-bottom:8px; display: flex; align-items: center; gap: 8px;">
+            <span class="available-dot"></span> Available for Projects
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2025 Babbage Tech Global. All rights reserved.</p>
+      <p class="footer-copy" style="color:var(--gray-dark)">Crafted with <i class="ph-fill ph-heart" style="color:var(--accent); font-size: 0.8rem;"></i> for innovation</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/globe.js"></script>
+</body>
+</html>

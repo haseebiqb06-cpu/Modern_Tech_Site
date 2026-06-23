@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="brandGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2dd4bf;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Globe Wireframe (Subtle) -->
+  <g opacity="0.3">
+    <circle cx="256" cy="256" r="240" fill="none" stroke="url(#brandGradient)" stroke-width="6" />
+    <ellipse cx="256" cy="256" rx="100" ry="240" fill="none" stroke="url(#brandGradient)" stroke-width="6" />
+    <ellipse cx="256" cy="256" rx="240" ry="100" fill="none" stroke="url(#brandGradient)" stroke-width="6" />
+    <line x1="16" y1="256" x2="496" y2="256" stroke="url(#brandGradient)" stroke-width="6" />
+    <line x1="256" y1="16" x2="256" y2="496" stroke="url(#brandGradient)" stroke-width="6" />
+  </g>
+  
+  <!-- The Official "B" Stencil Logo -->
+  <path d="M178,148 h165 c50,0 90,40 90,90 c0,35 -20,65 -50,80 c35,15 60,50 60,90 c0,55 -45,100 -105,100 h-160 v-360 z M248,218 v70 h60 c20,0 35,-15 35,-35 c0,-20 -15,-35 -35,-35 h-60 z M248,358 v75 h75 c25,0 45,-20 45,-45 c0,-25 -20,-45 -45,-45 h-75 z" fill="url(#brandGradient)" />
+  <!-- The Stencil Cut -->
+  <path d="M178,390 l45,45 v73 h-45 z" fill="url(#brandGradient)" />
+  <rect x="178" y="440" width="40" height="70" fill="black" transform="translate(0, 0)" opacity="0" /> 
+  <!-- Re-drawing with the gap -->
+  <path d="M178,148 h165 c50,0 90,40 90,90 c0,35 -20,65 -50,80 c35,15 60,50 60,90 c0,55 -45,100 -105,100 h-160 v-52 l45,-45 v-173 l-45,-45 v-135 z M248,218 v70 h60 c20,0 35,-15 35,-35 c0,-20 -15,-35 -35,-35 h-60 z M248,358 v75 h75 c25,0 45,-20 45,-45 c0,-25 -20,-45 -45,-45 h-75 z" fill="url(#brandGradient)" />
+</svg>

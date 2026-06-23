@@ -1,0 +1,16 @@
+{
+  "name": "babbage-tech-global",
+  "version": "1.0.0",
+  "description": "Babbage Tech Global Corporate Website",
+  "main": "index.html",
+  "dependencies": {
+    "resend": "^3.2.0"
+  },
+  "devDependencies": {
+    "serve": "^14.2.1"
+  },
+  "scripts": {
+    "start": "serve .",
+    "dev": "serve ."
+  }
+}
