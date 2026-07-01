@@ -7,7 +7,7 @@ window.addEventListener('load', () => {
   setTimeout(() => {
     const loader = document.getElementById('page-loader');
     if (loader) loader.classList.add('hidden');
-  }, 500);
+  }, 700);
 });
 
 // ── Custom Cursor ─────────────────────────────
