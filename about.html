@@ -65,6 +65,19 @@
     .team-card:hover .team-name { color: var(--accent); }
     .team-role { color: var(--teal); font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; }
     .team-bio { color:var(--gray); font-size:0.82rem; margin-top:8px; line-height:1.6; }
+    .team-profile-btn {
+      display:inline-flex; align-items:center; gap:6px;
+      margin-top:16px; padding:8px 20px; border-radius:50px;
+      background:transparent; border:1px solid var(--border);
+      color:var(--gray); font-size:0.78rem; font-weight:600;
+      text-decoration:none; letter-spacing:0.5px; transition:var(--transition);
+    }
+    .team-profile-btn:hover {
+      border-color:var(--accent); color:var(--white);
+      background:rgba(124,58,237,0.1); box-shadow:var(--glow); transform:translateY(-2px);
+    }
+    .team-profile-btn i { font-size:0.9rem; }
+
 
     .values-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:20px; margin-top:40px; }
     .value-item {
@@ -319,6 +332,7 @@
         <div class="team-name">Abdul Rehman Khan</div>
         <div class="team-role">Chief Technology Officer (CTO)</div>
         <div class="team-bio">Chief Technology Officer with 7+ years of expertise in AI, full-stack development, and scalable SaaS platforms. Dedicated to driving innovation through cutting-edge technology, automation, and secure digital solutions.</div>
+        <a href="team-abdulrehman.html" class="team-profile-btn"><i class="ph ph-user"></i> View Full Profile</a>
       </div>
 
       <!-- Muhammad Humayun Abdullah (now 4th) -->

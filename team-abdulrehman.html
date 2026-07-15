@@ -1,0 +1,186 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abdul Rehman Khan - CTO | Babbage Tech Global</title>
+  <meta name="description" content="Abdul Rehman Khan - Chief Technology Officer at Babbage Tech Global. 7+ years of expertise in AI, full-stack development, and scalable SaaS platforms." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <style>
+    .profile-hero { position:relative; padding:160px 0 80px; overflow:hidden; }
+    .profile-hero-bg { position:absolute; inset:0; background:radial-gradient(ellipse 80% 60% at 50% 0%, rgba(124,58,237,0.18) 0%, transparent 70%), radial-gradient(ellipse 40% 40% at 80% 50%, rgba(45,212,191,0.08) 0%, transparent 60%); }
+    .back-btn { display:inline-flex; align-items:center; gap:8px; color:var(--gray); font-size:0.85rem; font-weight:500; text-decoration:none; letter-spacing:0.5px; transition:var(--transition); margin-bottom:40px; }
+    .back-btn:hover { color:var(--accent); }
+    .back-btn i { font-size:1rem; transition:transform 0.3s; }
+    .back-btn:hover i { transform:translateX(-4px); }
+    .profile-hero-content { position:relative; z-index:1; }
+    .profile-role-badge { display:inline-flex; align-items:center; gap:8px; background:rgba(45,212,191,0.1); border:1px solid rgba(45,212,191,0.3); color:var(--teal); font-size:0.8rem; font-weight:600; text-transform:uppercase; letter-spacing:2px; padding:6px 16px; border-radius:50px; margin-bottom:20px; }
+    .profile-name { font-family:var(--font-main); font-size:clamp(3rem,8vw,6rem); font-weight:900; line-height:1.0; letter-spacing:-2px; margin-bottom:12px; }
+    .profile-name .first { color:var(--white); }
+    .profile-name .last { background:linear-gradient(135deg, var(--accent), var(--teal)); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
+    .profile-title-line { font-size:1.1rem; color:var(--gray); font-weight:400; letter-spacing:1px; margin-bottom:32px; }
+    .profile-title-line span { color:var(--white); font-weight:600; }
+    .skill-tags { display:flex; flex-wrap:wrap; gap:10px; }
+    .skill-tag { padding:6px 16px; border-radius:50px; font-size:0.78rem; font-weight:600; letter-spacing:0.5px; border:1px solid; cursor:default; }
+    .skill-tag.purple { background:rgba(124,58,237,0.12); border-color:rgba(124,58,237,0.4); color:#a78bfa; }
+    .skill-tag.teal { background:rgba(45,212,191,0.1); border-color:rgba(45,212,191,0.35); color:var(--teal); }
+    .skill-tag.white { background:rgba(255,255,255,0.05); border-color:rgba(255,255,255,0.15); color:var(--gray); }
+    .profile-stats { display:grid; grid-template-columns:repeat(3,1fr); border-top:1px solid var(--border); border-bottom:1px solid var(--border); margin:0 0 80px; }
+    .profile-stat-item { padding:32px 24px; text-align:center; border-right:1px solid var(--border); }
+    .profile-stat-item:last-child { border-right:none; }
+    .profile-stat-num { font-family:var(--font-main); font-size:2.5rem; font-weight:900; background:linear-gradient(135deg, var(--accent), var(--teal)); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; line-height:1; margin-bottom:6px; }
+    .profile-stat-label { font-size:0.82rem; color:var(--gray); }
+    .profile-main { padding:80px 0 100px; }
+    .profile-layout { display:grid; grid-template-columns:1fr 420px; gap:80px; align-items:start; }
+    .profile-section-label { font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:3px; color:var(--accent); margin-bottom:16px; }
+    .profile-section-title { font-family:var(--font-main); font-size:2.2rem; font-weight:800; line-height:1.2; margin-bottom:24px; color:var(--white); }
+    .profile-bio-text { color:var(--gray); font-size:1rem; line-height:1.85; margin-bottom:28px; }
+    .expertise-list { display:flex; flex-direction:column; gap:14px; margin-bottom:48px; margin-top:16px; }
+    .expertise-item { display:flex; align-items:center; gap:14px; padding:16px 20px; background:var(--card); border:1px solid var(--border); border-radius:12px; transition:var(--transition); }
+    .expertise-item:hover { border-color:var(--accent); box-shadow:var(--glow); transform:translateX(6px); }
+    .expertise-icon { width:36px; height:36px; border-radius:8px; background:linear-gradient(135deg, var(--accent), var(--teal)); display:flex; align-items:center; justify-content:center; font-size:1rem; color:#fff; flex-shrink:0; }
+    .expertise-text { font-size:0.92rem; color:var(--white); font-weight:500; }
+    .profile-cta-row { display:flex; gap:16px; flex-wrap:wrap; }
+    .btn-back { display:inline-flex; align-items:center; gap:8px; padding:14px 28px; border-radius:50px; border:1px solid var(--border); color:var(--gray); text-decoration:none; font-size:0.9rem; font-weight:500; transition:var(--transition); }
+    .btn-back:hover { border-color:var(--accent); color:var(--white); background:rgba(124,58,237,0.1); }
+    .btn-linkedin { display:inline-flex; align-items:center; gap:8px; padding:14px 28px; border-radius:50px; background:linear-gradient(135deg, var(--accent), var(--teal)); color:#fff; text-decoration:none; font-size:0.9rem; font-weight:600; transition:var(--transition); }
+    .btn-linkedin:hover { opacity:0.85; transform:translateY(-2px); box-shadow:0 8px 30px rgba(124,58,237,0.4); }
+    .profile-photo-col { position:sticky; top:120px; }
+    .profile-photo-wrap { position:relative; border-radius:32px; overflow:hidden; }
+    .profile-photo-wrap::before { content:''; position:absolute; inset:-2px; background:linear-gradient(135deg, var(--accent), var(--teal)); border-radius:34px; z-index:-1; }
+    .profile-photo-inner { border-radius:30px; overflow:hidden; position:relative; }
+    .profile-photo-inner img { width:100%; height:auto; display:block; filter:contrast(1.05) brightness(0.92) saturate(1.1); }
+    .profile-photo-inner::after { content:''; position:absolute; bottom:0; left:0; right:0; height:35%; background:linear-gradient(to top, rgba(5,5,5,0.6), transparent); }
+    .photo-badge { position:absolute; z-index:2; background:rgba(5,5,5,0.85); backdrop-filter:blur(12px); border:1px solid var(--border); border-radius:14px; padding:12px 18px; }
+    .photo-badge.badge-top-left { top:20px; left:-20px; }
+    .photo-badge.badge-bottom-right { bottom:20px; right:-20px; }
+    .photo-badge .badge-number { font-family:var(--font-main); font-size:1.5rem; font-weight:900; background:linear-gradient(135deg, var(--accent), var(--teal)); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; line-height:1; }
+    .photo-badge .badge-label { font-size:0.72rem; color:var(--gray); margin-top:2px; }
+    .photo-glow { position:absolute; width:200px; height:200px; border-radius:50%; background:radial-gradient(circle, rgba(124,58,237,0.4), transparent 70%); top:50%; left:50%; transform:translate(-50%,-50%); z-index:-2; filter:blur(40px); }
+    .slide-in-left { opacity:0; transform:translateX(-40px); animation:slideInLeft 0.8s cubic-bezier(0.22,1,0.36,1) 0.1s forwards; }
+    .slide-in-right { opacity:0; transform:translateX(40px); animation:slideInRight 0.8s cubic-bezier(0.22,1,0.36,1) 0.2s forwards; }
+    .fade-up { opacity:0; transform:translateY(20px); animation:fadeUp 0.7s ease forwards; }
+    .delay-1 { animation-delay:0.1s; } .delay-2 { animation-delay:0.25s; }
+    @keyframes slideInLeft { to { opacity:1; transform:translateX(0); } }
+    @keyframes slideInRight { to { opacity:1; transform:translateX(0); } }
+    @keyframes fadeUp { to { opacity:1; transform:translateY(0); } }
+    @media(max-width:1024px){ .profile-layout{ grid-template-columns:1fr; gap:60px; } .profile-photo-col{ position:static; } .photo-badge.badge-top-left{ left:10px; } .photo-badge.badge-bottom-right{ right:10px; } }
+    @media(max-width:768px){ .profile-name{ font-size:3rem; letter-spacing:-1px; } .profile-stats{ grid-template-columns:1fr; } .profile-stat-item{ border-right:none; border-bottom:1px solid var(--border); } .profile-stat-item:last-child{ border-bottom:none; } }
+  </style>
+</head>
+<body>
+<div id="page-loader"><div class="loader-content"><div class="loader-logo">BABBAGE TECH<span> GLOBAL</span></div><div class="loader-bar"><div class="loader-bar-fill"></div></div></div></div>
+<div id="cursor"></div><div id="cursor-ring"></div>
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">BABBAGE TECH<span> GLOBAL</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About Us</a></li>
+      <li class="nav-item dropdown-container">
+        <a href="services.html">Services</a>
+        <div class="dropdown-wrapper"><i class="ph-bold ph-caret-down"></i>
+          <div class="dropdown-menu">
+            <a href="services.html#it">IT Solutions</a><a href="services.html#branding">Branding</a>
+            <a href="services.html#marketing">Digital Marketing</a><a href="services.html#content">Content &amp; Video</a>
+            <a href="services.html#web">Web Design</a><a href="services.html#shopify">Shopify Development</a>
+          </div>
+        </div>
+      </li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="contact.html" class="nav-cta">Get a Quote</a></li>
+    </ul>
+    <div class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a><a href="about.html">About Us</a>
+  <a href="services.html">Services</a><a href="contact.html">Contact</a>
+  <a href="contact.html" style="color:var(--accent)">Get a Quote <i class="ph ph-arrow-right"></i></a>
+</div>
+<section class="profile-hero">
+  <div class="profile-hero-bg"></div><div class="grid-bg"></div>
+  <div class="orb orb-purple" style="top:-150px;left:-100px;"></div>
+  <div class="orb" style="top:100px;right:-80px;width:300px;height:300px;background:radial-gradient(circle,rgba(45,212,191,0.12),transparent);"></div>
+  <div class="container profile-hero-content">
+    <a href="about.html" class="back-btn fade-up"><i class="ph ph-arrow-left"></i> Back to Team</a>
+    <div class="profile-role-badge fade-up delay-1"><i class="ph ph-cpu"></i> Chief Technology Officer</div>
+    <h1 class="profile-name slide-in-left"><span class="first">Abdul Rehman</span><br/><span class="last">Khan</span></h1>
+    <p class="profile-title-line fade-up delay-1"><span>CTO</span> at Babbage Tech Global &nbsp;&middot;&nbsp; 7+ Years of Innovation</p>
+    <div class="skill-tags fade-up delay-2">
+      <span class="skill-tag purple">Artificial Intelligence</span>
+      <span class="skill-tag teal">Full-Stack Development</span>
+      <span class="skill-tag purple">SaaS Platforms</span>
+      <span class="skill-tag white">Cybersecurity</span>
+      <span class="skill-tag white">Automation</span>
+    </div>
+  </div>
+</section>
+<div class="container">
+  <div class="profile-stats">
+    <div class="profile-stat-item"><div class="profile-stat-num">7+</div><div class="profile-stat-label">Years of Experience</div></div>
+    <div class="profile-stat-item"><div class="profile-stat-num">50+</div><div class="profile-stat-label">Projects Delivered</div></div>
+    <div class="profile-stat-item"><div class="profile-stat-num">10+</div><div class="profile-stat-label">Technologies Mastered</div></div>
+  </div>
+</div>
+<section class="profile-main">
+  <div class="container">
+    <div class="profile-layout">
+      <div class="profile-text-col slide-in-left">
+        <div class="profile-section-label">About Him</div>
+        <h2 class="profile-section-title">Engineering the Future,<br/>One Line at a Time</h2>
+        <p class="profile-bio-text">Abdul Rehman Khan is the Chief Technology Officer at Babbage Tech Global, bringing over 7 years of deep technical expertise to the team. His career has been defined by a relentless passion for leveraging cutting-edge technology to solve real-world business challenges.</p>
+        <p class="profile-bio-text">From architecting intelligent AI-powered systems to building secure, scalable SaaS platforms from the ground up, Abdul Rehman ensures that Babbage Tech's technical foundation is always ahead of the curve. He believes great technology should not only work flawlessly — it should empower people and drive measurable growth.</p>
+        <div class="profile-section-label" style="margin-top:16px;">Core Expertise</div>
+        <div class="expertise-list">
+          <div class="expertise-item reveal"><div class="expertise-icon"><i class="ph ph-brain"></i></div><span class="expertise-text">Artificial Intelligence &amp; Machine Learning</span></div>
+          <div class="expertise-item reveal"><div class="expertise-icon"><i class="ph ph-stack"></i></div><span class="expertise-text">Full-Stack Web &amp; Mobile Development</span></div>
+          <div class="expertise-item reveal"><div class="expertise-icon"><i class="ph ph-cloud-arrow-up"></i></div><span class="expertise-text">Scalable SaaS Architecture &amp; Cloud Infrastructure</span></div>
+          <div class="expertise-item reveal"><div class="expertise-icon"><i class="ph ph-robot"></i></div><span class="expertise-text">Process Automation &amp; DevOps</span></div>
+          <div class="expertise-item reveal"><div class="expertise-icon"><i class="ph ph-shield-check"></i></div><span class="expertise-text">Cybersecurity &amp; Secure Digital Solutions</span></div>
+        </div>
+        <div class="profile-cta-row">
+          <a href="about.html" class="btn-back"><i class="ph ph-arrow-left"></i> Back to Team</a>
+          <a href="https://www.linkedin.com/company/babbage-tech-global/" target="_blank" rel="noopener noreferrer" class="btn-linkedin"><i class="ph ph-linkedin-logo"></i> Connect on LinkedIn</a>
+        </div>
+      </div>
+      <div class="profile-photo-col slide-in-right">
+        <div style="position:relative;">
+          <div class="photo-glow"></div>
+          <div class="profile-photo-wrap">
+            <div class="profile-photo-inner">
+              <img src="images/Abdul Rehman Khan.jpeg" alt="Abdul Rehman Khan - CTO at Babbage Tech Global">
+            </div>
+          </div>
+          <div class="photo-badge badge-top-left"><div class="badge-number">7+</div><div class="badge-label">Yrs Experience</div></div>
+          <div class="photo-badge badge-bottom-right"><div class="badge-number">CTO</div><div class="badge-label">Babbage Tech Global</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<footer style="background:var(--card);border-top:1px solid var(--border);padding:60px 0 30px;">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="nav-logo" style="font-size:1.6rem;">BABBAGE TECH<span> GLOBAL</span></a>
+        <p class="footer-brand-desc">Your full-stack digital partner - IT, Branding, Marketing, Content, Web Design &amp; Shopify. Powering businesses globally.</p>
+        <div class="social-links" style="margin-top:24px;">
+          <a href="https://www.linkedin.com/company/babbage-tech-global/" target="_blank" rel="noopener noreferrer" class="social-link"><i class="ph-light ph-linkedin-logo"></i></a>
+          <a href="#" class="social-link"><i class="ph-light ph-x-logo"></i></a>
+          <a href="https://www.instagram.com/babbagetechglobal?igsh=YzJ5YXhvazJ6bzZi" target="_blank" class="social-link"><i class="ph-light ph-instagram-logo"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=61582574995800" target="_blank" class="social-link"><i class="ph-light ph-facebook-logo"></i></a>
+        </div>
+      </div>
+      <div><div class="footer-heading">Quick Links</div><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><div class="footer-heading">Services</div><ul class="footer-links"><li><a href="services.html#it">IT Solutions</a></li><li><a href="services.html#branding">Branding</a></li><li><a href="services.html#marketing">Digital Marketing</a></li><li><a href="services.html#web">Web Design</a></li></ul></div>
+      <div><div class="footer-heading">Get in Touch</div><ul class="footer-links"><li><a href="contact.html">Contact Us</a></li><li><a href="contact.html">Get a Quote</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2025 Babbage Tech Global. All rights reserved.</p></div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
